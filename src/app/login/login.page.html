@@ -5,8 +5,10 @@
 </ion-header>
 
 <ion-content>
+     <div class="fondo">
 
-  <ion-img src="\assets\icon\png.png"></ion-img>
+ <div class="imagen"><ion-img src="\assets\icon\png.png"></ion-img></div>
+<form (ngSubmit)=login(Forma) #Forma="ngForm">
 
   <ion-item color="tertiary">
     <ion-label position="user"><ion-icon mame="at"></ion-icon>usuario</ion-label>
@@ -20,5 +22,11 @@
 
   <ion-button expand="block">ingresar</ion-button>
   <ion-button color="medium">Registro</ion-button> <ion-button color="medium">Invitado</ion-button>
-  
+  <p class="linea">O</p>
+  <br>
+  <ion-button routerLink="/maps" type="submit" [disabled]=!Forma.valid expand="default" class="" ></ion-button>
+  <ion-button routerLink="/Registro" type="submit"[disabled]=!Forma.valid expand="default"></ion-button>
+ 
+</form>
+</div>
 </ion-content>
