@@ -5,5 +5,32 @@
 </ion-header>
 
 <ion-content>
+   
+    <ion-img width="30" height="30" src="\assets\icon\png.png"></ion-img>
 
+  <p>Tenga en cuenta que el administrador revisara su solicitud y hara aprobacion dentro de las 24horas siguientes al envio de los datos</p>
+
+    <ion-item color="tertiary">
+       <ion-icon name="mail"></ion-icon><ion-label position="user"><ion-icon mame="at"></ion-icon>Email </ion-label>
+       <ion-input ngModel #user="ngModel" name="user" minlength="3"></ion-input>
+       </ion-item>
+     
+       <ion-item color="tertiary">
+       <ion-icon name="person-add"></ion-icon><ion-label input type="password"icon name="key"><ion-icon mame="key"></ion-icon>Usuario</ion-label>
+       <ion-input type="password" ngModel #password="ngModel"name="password" minlength="3"></ion-input>
+       </ion-item>
+       
+       <ion-item color="tertiary">
+       <ion-icon name="key"></ion-icon><ion-label position="user"><ion-icon mame="at"></ion-icon>Contraseña </ion-label>
+       <ion-input ngModel #user="ngModel" name="user" minlength="3"></ion-input>
+       </ion-item>
+     
+       <ion-item color="tertiary">
+       <ion-icon name="key"></ion-icon><ion-label input type="password"icon name="key"><ion-icon mame="key"></ion-icon>Repita Contraseña</ion-label>
+       <ion-input type="password" ngModel #password="ngModel"name="password" minlength="3"></ion-input>
+       </ion-item>
+
+       <ion-item  class="boton" >
+       <ion-button expand="full"routerLink="/login">Registrarce</ion-button>
+       </ion-item>
 </ion-content>

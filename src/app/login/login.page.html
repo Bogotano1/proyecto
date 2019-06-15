@@ -5,28 +5,28 @@
 </ion-header>
 
 <ion-content>
-     <div class="fondo">
-
+     <div class="background">
+     
  <div class="imagen"><ion-img src="\assets\icon\png.png"></ion-img></div>
 <form (ngSubmit)=login(Forma) #Forma="ngForm">
 
   <ion-item color="tertiary">
     <ion-label position="user"><ion-icon mame="at"></ion-icon>usuario</ion-label>
-   <ion-input ngModel #user="ngModel" name="user" minlength="3"></ion-input>
+   <ion-input ngModel #user="ngModel" name="nombre" minlength="3"></ion-input>
    </ion-item>
-
+ 
    <ion-item color="tertiary">
    <ion-label input type="password"icon name="key"><ion-icon mame="key"></ion-icon>contraseña</ion-label>
    <ion-input type="password" ngModel #password="ngModel"name="password" minlength="3"></ion-input>
    </ion-item>
 
-  <ion-button expand="block">ingresar</ion-button>
-  <ion-button color="medium">Registro</ion-button> <ion-button color="medium">Invitado</ion-button>
-  <p class="linea">O</p>
-  <br>
-  <ion-button routerLink="/maps" type="submit" [disabled]=!Forma.valid expand="default" class="" ></ion-button>
-  <ion-button routerLink="/Registro" type="submit"[disabled]=!Forma.valid expand="default"></ion-button>
- 
+  <ion-button color="primary"expand="block" type="submit" >ingresar</ion-button>
+  <ion-input ngModel #user="ngModel"  name="user" minlength="3"></ion-input>
+
+  <ion-button color="medium" class="bot" routerLink="/registro" class="bot" >Registro</ion-button>
+  
+   <ion-button  clas="home"routerLink="/maps" color="medium">Invitado</ion-button>
+
 </form>
 </div>
 </ion-content>
