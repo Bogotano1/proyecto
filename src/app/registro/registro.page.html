@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content>
+    <div class="background">
    
     <ion-img width="30" height="30" src="\assets\icon\png.png"></ion-img>
 
@@ -16,21 +17,21 @@
        </ion-item>
      
        <ion-item color="tertiary">
-       <ion-icon name="person-add"></ion-icon><ion-label input type="password"icon name="key"><ion-icon mame="key"></ion-icon>Usuario</ion-label>
+        <ion-icon name="key"></ion-icon><ion-label position="user"><ion-icon mame="at"></ion-icon>Usuario </ion-label>
+        <ion-input ngModel #user="ngModel" name="user" minlength="3"></ion-input>
+        </ion-item>
+
+       <ion-item color="tertiary">
+       <ion-icon name="person-add"></ion-icon><ion-label input type="password"icon name="key"><ion-icon mame="key"></ion-icon>Contraseña</ion-label>
        <ion-input type="password" ngModel #password="ngModel"name="password" minlength="3"></ion-input>
        </ion-item>
        
-       <ion-item color="tertiary">
-       <ion-icon name="key"></ion-icon><ion-label position="user"><ion-icon mame="at"></ion-icon>Contraseña </ion-label>
-       <ion-input ngModel #user="ngModel" name="user" minlength="3"></ion-input>
-       </ion-item>
      
        <ion-item color="tertiary">
        <ion-icon name="key"></ion-icon><ion-label input type="password"icon name="key"><ion-icon mame="key"></ion-icon>Repita Contraseña</ion-label>
        <ion-input type="password" ngModel #password="ngModel"name="password" minlength="3"></ion-input>
        </ion-item>
-
-       <ion-item  class="boton" >
-       <ion-button expand="full"routerLink="/login">Registrarce</ion-button>
-       </ion-item>
+       
+       <ion-button expand="block"routerLink="/login">Registrarce</ion-button>
+       </div>
 </ion-content>
