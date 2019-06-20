@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { LoadingController } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -8,12 +9,13 @@ import { LoadingController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  [x: string]: any;
 User=
   {
-    usuario: "Sebastian",
-    password: "123456"
+    usuario: "Seb",
+    password: "123"
   }
-    constructor( public loadingCtrl : LoadingController){ }
+    constructor( public loadingCtrl : LoadingController, public NavCtrl: NavController){ }
 
       ngOnInit() {
     }
@@ -28,15 +30,14 @@ User=
           duration:  2000,
         });
         loading.present();
-        //this.User.correo = forma.value.email;
-        //this.User.password = forma.value.clave; 
+         
         console.log("ingrese a login"); 
-    }
-    if (this.User.usuario === forma.value.nombre && this.User.password === forma.value.password  )
+      }
+    if (this.User.usuario === forma.value.nombre && this.User.password === forma.value.Contraseña  )
     {
       console.log("verdadero");
-      //this.user.correo. = forma.value.email
-      //this.user.contraseña = forma.value.clave;
+      this.NavCtrl.navigateForward("/tabs/tab1");
+      
     }
     else
     {

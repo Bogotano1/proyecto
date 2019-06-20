@@ -9,7 +9,6 @@
      
  <div class="imagen"><ion-img src="\assets\icon\png.png"></ion-img></div>
 <form (ngSubmit)=login(Forma) #Forma="ngForm">
-
   <ion-item color="tertiary">
     <ion-label position="user"><ion-icon mame="at"></ion-icon>usuario</ion-label>
    <ion-input ngModel #user="ngModel" name="nombre" minlength="3"></ion-input>
@@ -17,15 +16,15 @@
  
    <ion-item color="tertiary">
    <ion-label input type="password"icon name="key"><ion-icon mame="key"></ion-icon>contraseña</ion-label>
-   <ion-input type="password" ngModel #password="ngModel"name="password" minlength="3"></ion-input>
+   <ion-input type="password" ngModel #password="ngModel" name="Contraseña" minlength="3"></ion-input>
    </ion-item>
 
-  <ion-button color="secondary"expand="block" type="submit" >ingresar</ion-button>
+  <ion-button color="secondary"expand="block" type="submit" shape="round">ingresar</ion-button>
   <ion-input ngModel #user="ngModel"  name="user" minlength="3"></ion-input>
 
-  <ion-button color="tertiary" routerLink="/registro"class="bot" >Registro</ion-button>
+  <ion-button routerLink="/registro"color="tertiary" class="bot" shape="round">Registro</ion-button>
   
-   <ion-button routerLink="/maps" color="tertiary"class="invit">Invitado</ion-button>
+   <ion-button routerLink="/maps" color="tertiary"class="invit" shape="round">Invitado</ion-button>
 
 </form>
 </div>
